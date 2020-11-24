@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
 String type= (String) session.getAttribute("type");
-// 判断用户类型
+// 判断用户类型 返回不同jsp页面
 if (type.equals("admin")){
     request.getRequestDispatcher("admin.jsp").forward(request,response);
 } else if (type.equals("teacher")) {

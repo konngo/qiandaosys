@@ -15,6 +15,46 @@
     <url-pattern>/login</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>buqian</servlet-name>
+    <servlet-class>cn.konngo.servlet.BuqianServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>buqian</servlet-name>
+    <url-pattern>/buqian</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>qiandao</servlet-name>
+    <servlet-class>cn.konngo.servlet.QiandaoServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>qiandao</servlet-name>
+    <url-pattern>/qiandao</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>updateSServlet</servlet-name>
+    <servlet-class>cn.konngo.servlet.UpdateSServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>updateSServlet</servlet-name>
+    <url-pattern>/updateSServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>updateTServlet</servlet-name>
+    <servlet-class>cn.konngo.servlet.UpdateTServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>updateTServlet</servlet-name>
+    <url-pattern>/updateTServlet</url-pattern>
+  </servlet-mapping>
+
 
   <welcome-file-list>
     <welcome-file>login.jsp</welcome-file>

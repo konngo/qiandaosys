@@ -3,15 +3,14 @@
 
 <html>
 <head>
-    <title>学生注册</title>
-
+    <title>教师注册</title>
 </head>
 <body>
-<form action="studentRegister.jsp">
-    学号：<input type="text" name="sno"><br>
+<form action="teacherRegister.jsp">
+    工号：<input type="text" name="tno"><br>
     姓名：<input type="text" name="username"><br>
     密码：<input type="text" name="password"><br>
-    班级：<input type="text" name="classes"><br>
+    学院：<input type="text" name="college"><br>
     <input type="hidden" name="pages" value="${pages}">
     <input type="submit" value="提交">
 </form>

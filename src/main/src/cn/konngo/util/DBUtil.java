@@ -4,6 +4,7 @@ import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
 import java.sql.*;
 
+// 数据库工具类
 public class DBUtil {
     private Connection conn = null;
     private Statement stmt = null;
@@ -86,6 +87,42 @@ public class DBUtil {
         }
         return count;
     }
+
+
+    /**
+     * 执行更新、插入、删除等操作
+     * @param sql
+     * @return 返回值是操作影响的行数(即更新、插入或删除了几条数据)
+     */
+    public int executeUpdate(String sql){
+        int count = 0;
+        try{
+            conn = this.getConnection();
+            stmt = conn.createStatement();
+            count = stmt.executeUpdate(sql);
+        } catch (SQLException e) {
+            System.out.println("DBUtils.executeUpdate---执行更新、插入、删除等操作失败！");
+            e.printStackTrace();
+        } finally {
+            close();
+        }
+        return count;
+    }
+
+    public void execute(String sql){
+        try{
+            conn = this.getConnection();
+            stmt = conn.createStatement();
+            stmt.execute(sql);
+        } catch (SQLException e) {
+            System.out.println("DBUtils.executeUpdate---执行更新、插入、删除等操作失败！");
+            e.printStackTrace();
+        } finally {
+            close();
+        }
+    }
+
+
 
     /**
      * 装载PreparedStatement

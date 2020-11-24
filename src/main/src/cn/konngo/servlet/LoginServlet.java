@@ -31,7 +31,7 @@ public class LoginServlet extends HttpServlet {
     // 查询学生用户
     private void checkStudent(String username, String password, HttpServletRequest req, HttpServletResponse resp) {
         String []str={username,password};
-        ResultSet set= Common.dbUtil.executeQuery("select * from students where username='"+username+"' and password='"+password+"'");
+        ResultSet set= Common.dbUtil.executeQuery("select * from students where sno='"+username+"' and password='"+password+"'");
         try {
             if (set.next()){
                 //登录成功
@@ -55,7 +55,7 @@ public class LoginServlet extends HttpServlet {
     // 查询教师用户
     private void checkTeacher(String username, String password, HttpServletRequest req, HttpServletResponse resp){
         String []str={username,password};
-        ResultSet set= Common.dbUtil.executeQuery("select * from teacher where username='"+username+"' and password='"+password+"'");
+        ResultSet set= Common.dbUtil.executeQuery("select * from teacher where tno='"+username+"' and password='"+password+"'");
         try {
             if (set.next()){
                 //登录成功
